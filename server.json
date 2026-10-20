@@ -1,0 +1,23 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.layerre/layerre",
+  "title": "Layerre",
+  "description": "Turn Canva designs into templates and render image/PDF variants via the Layerre API.",
+  "version": "0.1.0",
+  "websiteUrl": "https://layerre.com",
+  "repository": { "url": "https://github.com/Layerre/layerre-mcp", "source": "github" },
+  "remotes": [
+    { "type": "streamable-http", "url": "https://mcp.layerre.com/mcp" }
+  ],
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@layerre/mcp-server",
+      "version": "0.1.0",
+      "transport": { "type": "stdio" },
+      "environmentVariables": [
+        { "name": "LAYERRE_API_KEY", "description": "Layerre API key (lyr_...)", "isRequired": true, "isSecret": true }
+      ]
+    }
+  ]
+}

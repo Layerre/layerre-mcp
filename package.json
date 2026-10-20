@@ -1,0 +1,62 @@
+{
+  "name": "@layerre/mcp-server",
+  "version": "0.2.0",
+  "description": "Layerre MCP server: turn Canva designs into templates and render image/PDF variants from AI assistants",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "layerre-mcp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "dev:http": "tsx src/server.ts",
+    "start": "node dist/index.js",
+    "start:http": "node dist/server.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "zod": "^3.24.1",
+    "dotenv": "^16.4.7",
+    "jose": "^5.9.6",
+    "zod-to-json-schema": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "layerre",
+    "canva",
+    "image-generation",
+    "templates",
+    "pdf"
+  ],
+  "license": "MIT",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Layerre/layerre-mcp.git"
+  },
+  "mcpName": "com.layerre/layerre",
+  "homepage": "https://layerre.com/docs/mcp/",
+  "bugs": {
+    "url": "https://github.com/Layerre/layerre-mcp/issues"
+  },
+  "author": "Layerre <hello@layerre.com>"
+}
