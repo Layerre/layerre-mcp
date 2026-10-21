@@ -1,6 +1,6 @@
 {
   "name": "@layerre/mcp-server",
-  "version": "0.2.0",
+  "version": "0.1.0",
   "description": "Layerre MCP server: turn Canva designs into templates and render image/PDF variants from AI assistants",
   "type": "module",
   "main": "dist/index.js",

@@ -91,7 +91,7 @@ function publicError(err: unknown): string {
  */
 export function createMcpServer(authContext: AuthContext, requestId: string): Server {
   const server = new Server(
-    { name: 'layerre', title: 'Layerre', version: '0.2.0' } as any,
+    { name: 'layerre', title: 'Layerre', version: '0.1.0' } as any,
     {
       capabilities: { tools: {} },
       instructions:

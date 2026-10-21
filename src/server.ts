@@ -8,7 +8,7 @@ import { authenticateBearer, parseBearer, AuthError } from './auth/verify.js';
 import { createMcpServer, enabledTools } from './tools/registry.js';
 import { ipRateLimiter } from './security/rateLimiter.js';
 
-const VERSION = '0.2.0';
+const VERSION = '0.1.0';
 const RESOURCE_METADATA_URL = `${appConfig.publicUrl}/.well-known/oauth-protected-resource`;
 
 class HttpError extends Error {
