@@ -16,7 +16,6 @@ Docs: **[layerre.com/docs/mcp](https://layerre.com/docs/mcp/)**
 - Read and update template layers (text, images, positions, styling)
 - Generate image/PDF variants with per-layer overrides, singly or in bulk
 - Remote server with browser OAuth sign-in, or API key / local stdio
-- Safe by design: no delete, billing, or API-key-management tools
 
 ## Quick start
 
@@ -104,39 +103,9 @@ Example prompts:
 - "Import https://www.canva.com/design/... as a Layerre template tagged `social`."
 - "Generate a PNG of my 'Event Card' template with the title set to 'Launch Day'."
 
-## Configuration (self-hosting)
-
-Copy `.env.example` to `.env`. Key variables:
-
-| Variable | Description |
-|----------|-------------|
-| `LAYERRE_API_URL` | Layerre API base URL |
-| `MCP_PUBLIC_URL` | Public URL of this server |
-| `AUTH_ISSUER` | OAuth issuer (Supabase `https://<ref>.supabase.co/auth/v1`) |
-| `ALLOWED_ORIGINS` | Allowed browser origins (non-browser clients unaffected) |
-| `TRUST_PROXY` | `true` when behind a reverse proxy |
-| `LAYERRE_API_KEY` | stdio mode only |
-
-```bash
-docker build -t layerre-mcp . && docker run --env-file .env -p 3000:3000 layerre-mcp
-```
-
 ## Development
 
-```bash
-npm install
-npm run dev:http     # HTTP server
-npm run dev          # stdio
-npm run typecheck && npm test
-npx @modelcontextprotocol/inspector
-```
-
-See [CONTRIBUTING.md](./CONTRIBUTING.md) and [SETUP.md](./SETUP.md).
-
-## Security
-
-Stateless, per-request authentication; your token is forwarded to the Layerre API, which enforces
-ownership. See [SECURITY.md](./SECURITY.md) for the model and how to report vulnerabilities.
+See [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ## Privacy & support
 

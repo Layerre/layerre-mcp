@@ -63,7 +63,7 @@ function validateConfig(): Config {
 
   const strip = (u: string) => u.replace(/\/+$/, '');
   const authIssuer = strip(process.env.AUTH_ISSUER || 'https://test-issuer.invalid/auth/v1');
-  const publicUrl = strip(process.env.MCP_PUBLIC_URL || 'http://localhost:3000');
+  const publicUrl = strip(process.env.MCP_PUBLIC_URL || 'http://localhost:3100');
   const layerreApiUrl = strip(process.env.LAYERRE_API_URL!);
 
   if (isProd) {
@@ -90,7 +90,7 @@ function validateConfig(): Config {
     jwksUrl: process.env.AUTH_JWKS_URL || `${authIssuer}/.well-known/jwks.json`,
     supabaseJwtSecret,
     jwtAudience: process.env.AUTH_AUDIENCE || 'authenticated',
-    serverPort: 3000,
+    serverPort: 3100,
     serverHost: '0.0.0.0',
     nodeEnv: process.env.NODE_ENV || 'development',
     logLevel: process.env.LOG_LEVEL || 'info', // tests set LOG_LEVEL=error
